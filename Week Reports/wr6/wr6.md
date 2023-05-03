@@ -32,8 +32,24 @@ The ? wildcard metacharacter matches precisely one character.
 ### [] Wildcard
 The [] wildcard match a single character in a range.
 * Examples
-  *
+  * Match all files that have a vowel after letter f.
+    * 'ls f[aeiou]*'
+  * Match all files that do not have a vowel after letter f.
+    * 'ls f[!aeiou]*'
+  * Match all files that have a range of letters after f.
+    * 'ls f[a-z]*'
 
 ### Brace Expansion
+Brace expansion {} is not a wildcard but another feature of bash that allows you to generate arbitrary strings to use with commands.
+* Examples
+  * To create a whole directory structure in a single command.
+    * 'mkdir -p music/{jazz,rock}/{mp3files,videos,oggfiles}/new{1..3}'
+  * To create a N number of files use.
+    * 'touch website{1..5}.html'
+  * Remove multiple files in a single directory.
+    * 'rm -r {dir1,dir2,dir3,file.txt,file.py}'
 
 ## Practice
+![Practice 5](../../labs/lab%205/practice5.png)
+![Practice 6](../../labs/lab%205/practice6.png)
+![Practice 7](../../labs/lab%205/practice7.png)
